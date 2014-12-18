@@ -19,7 +19,7 @@
     "custom_script": "."
   },
   "builders": [{
-    "vm_name": "ubuntu1404",
+    "vm_name": "trusty64pp",
     "type": "vmware-iso",
     "guest_os_type": "ubuntu-64",
     "http_directory": "http",
@@ -60,7 +60,7 @@
     }
   },
   {
-    "vm_name": "ubuntu1404",
+    "vm_name": "trusty64pp",
     "type": "virtualbox-iso",
     "http_directory": "http",
     "iso_url": "{{ user `iso_url` }}",
@@ -92,7 +92,7 @@
     ]
   },
   {
-    "vm_name": "ubuntu1404",
+    "vm_name": "trusty64pp",
     "type": "parallels-iso",
     "http_directory": "http",
     "iso_url": "{{ user `iso_url` }}",
@@ -163,6 +163,6 @@
   "post-processors": [{
     "type": "vagrant",
     "keep_input_artifact": false,
-    "output": "box/{{.Provider}}/ubuntu1404-{{user `cm`}}{{user `cm_version`}}-{{user `version`}}.box"
+    "output": "box/{{.Provider}}/trusty64pp-{{user `cm`}}{{user `cm_version`}}-{{user `version`}}.box"
   }]
 }
