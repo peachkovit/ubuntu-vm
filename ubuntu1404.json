@@ -151,6 +151,8 @@
     "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
     "scripts": [
       "script/update.sh",
+      "script/rvm_ruby.sh",
+      "script/extra_repo_sw.sh",
       "script/vagrant.sh",
       "script/sshd.sh",
       "script/vmtool.sh",
