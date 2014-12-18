@@ -1,5 +1,9 @@
 #!/bin/bash -eux
 
+# set the correct timezone
+echo "Europe/Ljubljana" > /etc/timezone
+dpkg-reconfigure -f noninteractive tzdata
+
 if [[ $UPDATE  =~ true || $UPDATE =~ 1 || $UPDATE =~ yes ]]; then
 	echo "==> Updating list of repositories"
     # apt-get update does not actually perform updates, it just downloads and indexes the list of packages
